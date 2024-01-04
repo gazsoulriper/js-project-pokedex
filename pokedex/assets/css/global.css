@@ -1,0 +1,35 @@
+* {
+    font-family: 'Roboto', sans-serif;
+    box-sizing: border-box;
+    
+}
+
+h1 {
+    text-align:center;
+    text-shadow: 3px 4px black;
+    font-size: 35px;
+    font-family: 'Pokemon Solid', sans-serif;
+    -webkit-text-stroke: 2px #3466af;
+    color: #ffc805;
+}
+
+body {
+    background-color: #d6d9e0;
+}
+
+.content {
+    width: 100vw;
+    height: 100%;
+    padding: 1rem;
+    background-color: #f3ebeb;
+    box-shadow: 5px 10px 5px 0 #1617185d;
+}
+
+@media screen and (min-width: 992px) {
+    .content {
+        max-width: 992px;
+        height: auto;
+        margin: 1rem auto;
+        border-radius: 1rem;
+    }
+}
