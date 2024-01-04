@@ -1,9 +1,11 @@
 const pokemonDetail = document.getElementById('pokemonDetail')
 const loadMoreButton = document.getElementById('loadMoreButton')
 
+
  const maxRecords = 99999
 const limit = 8
 let offset = 0;
+
 
 function convertPokemonToLi(pokemon) {
     return `
@@ -26,12 +28,14 @@ function convertPokemonToLi(pokemon) {
     `
 }
 
+
 const clickPokemon = async (id) =>{
     const url = `https://pokeapi.co/api/v2/pokemon/${id}`
     const res = await fetch(url)
     const pokemon = await res.json()
     displayModal(pokemon)
 }
+
 
 const displayModal = (pokemon) =>{
    
@@ -76,21 +80,19 @@ const displayModal = (pokemon) =>{
            </div>
         </div>
      </li>
-          
-            
-             
-                
-            
-    
+           
     `
-   
+
+ 
     pokemonDetail.innerHTML = htmlString + pokemonDetail.innerHTML
 }
+
 
 const closeModal = () =>{
     const modal = document.getElementById('modal')
     modal.parentElement.removeChild(modal)
 }
+
 
 function loadPokemonItens(offset, limit) {
     pokeApi.getPokemons(offset, limit).then((pokemons = []) => {
@@ -99,12 +101,16 @@ function loadPokemonItens(offset, limit) {
     })
 }
 
+
 loadPokemonItens(offset, limit)
+
 
 loadMoreButton.addEventListener('click', () => {
     offset += limit
+ 
     const qtdRecordsWithNextPage = offset + limit
 
+ 
     if (qtdRecordsWithNextPage >= maxRecords) {
          const newLimit = maxRecords - offset
          loadPokemonItens(offset, newLimit)
