@@ -61,13 +61,13 @@ const displayModal = (pokemon) =>{
                  <div id="data">
                  <h4>Base Stats</h4>
                  <div id="hability">
-                 <div class="stat-desc">
+                 <div class="stats-desc">
                   ${pokemon.stats.map((name_stats) =>`<p class="${type}">${name_stats.stat.name}</p>`).join('')}
                  </div>
                  <div class="bar-inner"> ${pokemon.stats.map((base_stats) =>`<p class="${type}">${base_stats.base_stat}</p>`).join('')}</div>
                  </div>
                  <div id="stats">
-                     <div class="stat-bar">
+                     <div class="stats-bar">
                          <p>Height: ${(pokemon.height/10).toFixed(2)}m</p>
                          <p>Weight: ${(pokemon.weight/10)}kg</p>
                        </div>
