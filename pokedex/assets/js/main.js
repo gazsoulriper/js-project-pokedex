@@ -49,7 +49,9 @@ const displayModal = (pokemon) =>{
     const htmlString = `
    
     <div id="modal">
+    
       <div id="clickPokemon">
+      
           <button id="closeBtn" onClick="closeModal()">Close</button>
             <li class="pokemon ${pokemon.type}">
             <span class="name">${pokemon.name}</span>
